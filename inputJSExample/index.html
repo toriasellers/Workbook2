@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <p>Name: <input type="text" id="nameField"/></p>
+    <p>Favorite Animal: <input type="text" id="favAnimalField"/></p>
+    <p><input type="button" id="showBtn" value="Show"/></p>
+    <p id="placeholder"></p>
+    
+    <script>
+
+        window.onload = customInit(); // you dont have to use init
+
+        function customInit() {
+            console.log("Page has loaded");
+            const showBtnEl = document.getElementById("showBtn");
+            showBtnEl.onclick = handleBtnOnClick; //.onclick invokes
+        }
+
+        function handleBtnOnClick(){
+            console.log("button click");
+
+        const nameInputEl = document.getElementById("nameField");
+        const favAnimalInputEl = document.getElementById("favAnimalField");
+        
+        //*you can remove these variables and substitute your .values directly into your message
+        // example ${nameInputEl.value}*
+        const nameStr = nameInputEl.value; 
+        const animalStr = favAnimalInputEl.value;
+        
+        // writing message with interpolation
+        let message = `Hi ${nameStr}, I like ${animalStr} too!!`;
+
+        const messagePlaceholderEl = document.getElementById("placeholder")
+        messagePlaceholderEl.innerHTML = message;
+
+
+    }
+    </script>
+    
+</body>
+</html>

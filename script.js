@@ -1,1 +1,9 @@
-console.log("hello toria <3");
+var num1 =1;
+
+num1 *= 2; //2
+num1 *= 2; //4
+num1 *= 2; //8
+num1 *= 2; //16
+num1 *= 2; //32
+num1 *= 2; //64
+num1 *= 2; //128
